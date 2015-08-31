@@ -7,7 +7,7 @@ import utils.FileUtils;
 
 public class SelectionSortApp {
         public static void main(String[] args) throws IOException {
-        Scanner in = FileUtils.loadFile();
+        Scanner in = FileUtils.loadFile("input.txt");
         int[] data = FileUtils.InputDataToArray(in);
 
         System.out.println("Reading data...");

@@ -9,13 +9,13 @@ import java.util.Scanner;
 
 public class FileUtils {
     
-    public static Scanner loadFile() {
+    public static Scanner loadFile(String fileName) {
         try {
-            Scanner in = new Scanner(new FileReader("input.txt"));
+            Scanner in = new Scanner(new FileReader(fileName));
             return in;
         }
         catch (IOException e) {
-            System.out.println("The files doesnt exists");
+            System.out.println("The file doesnt exists");
         }
         return null;
     }
@@ -43,6 +43,15 @@ public class FileUtils {
         
         writer.close();
     }
+
+    public static void resultToFile(int result) throws IOException {
+        BufferedWriter writer = new BufferedWriter(
+                new FileWriter(new File("output.txt")));
+        
+        writer.write(String.valueOf(result));
+        writer.close();
+    }
+
 }
 
     
