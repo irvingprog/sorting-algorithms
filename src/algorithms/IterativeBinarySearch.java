@@ -12,14 +12,12 @@ public class IterativeBinarySearch {
             mid=(low+high)/2;
             if (data[mid]<key){
                 low = mid+1;
-                else if (data[mid]>key){
+                }else if (data[mid]>key){
                     high = mid-1;
-                    else 
+                    }else 
                         return mid;
                 }
-            }
-        return -1
-        }
+        return -1;
+    }
 
-}
 }

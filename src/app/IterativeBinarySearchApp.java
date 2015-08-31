@@ -9,11 +9,11 @@ public class IterativeBinarySearchApp {
     
     public static void main(String[] args) throws IOException {
         System.out.println("Enter the number you want to look for: ");
-        int key=search.nextInt();
         Scanner in = FileUtils.loadFile("sortedInput.txt");
-        Scanner read = new Scanner(System.in);
         int[] data = FileUtils.InputDataToArray(in);
+        int key = Math.random()*17+1;
         System.out.println("Reading data...");
+        System.out.println("Looking for: "+key);
        
         int result=IterativeBinarySearch.exec(data, key);
         System.out.println();
